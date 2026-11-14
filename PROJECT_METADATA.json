@@ -9,14 +9,18 @@
   "challenge": "Build a Junior Astronaut Mission Trainer",
   "si": {
     "code": "ChatGPT assisted implementation, tests and debugging.",
-    "writing": "ChatGPT assisted bilingual explanations and documentation.",
+    "writing": "ChatGPT assisted bilingual explanations, editing, documentation, translation and presentation text.",
     "images": "Image-generation tools created fictional backgrounds and cover artwork; visible marks are included.",
     "audio": "Procedural Web Audio tones; no AI-generated speech or model-based audio generation. Audio code received ChatGPT assistance.",
-    "data": "No SI-generated scientific dataset is presented as NASA data. Game scores and scenarios are fictional teaching models."
+    "data": "No SI-generated scientific dataset is presented as NASA data. Game scores and scenarios are fictional teaching models.",
+    "research": "ChatGPT assisted research into scientific references and submission requirements.",
+    "refinement": "ChatGPT assisted selected mechanics, visual-design and presentation refinements; the core project concept belongs to the team."
   },
   "runtime_external_ai": false,
   "nasa_resource_use": "Educational references; historical DONKI example, no live API.",
   "website": "https://parsec.kz/lunaris/",
   "presentation": "https://github.com/isazhannnn/LUNARIS/blob/main/demo/LUNARIS-Demo.pdf",
-  "source_code": "https://github.com/isazhannnn/LUNARIS"
+  "source_code": "https://github.com/isazhannnn/LUNARIS",
+  "original_concept": "Parsec Studio: Meiirzhan Issa and Zhasulan Zholdas.",
+  "team_contribution": "Core project concept, educational goals, story requirements, gameplay direction and final creative decisions."
 }

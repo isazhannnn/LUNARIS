@@ -1,7 +1,16 @@
 # Team authorship and tool assistance
 
-LUNARIS was created and directed by Parsec Studio (Meiirzhan Issa and Zhasulan Zholdas). The team defined the concept, educational focus, story requirements and final creative decisions. ChatGPT was used as a development assistant for parts of the code, explanatory writing, tests and debugging. Image-generation tools produced fictional lunar backgrounds and cover artwork. This submission edition includes visible generation marks on those visuals, with code and asset acknowledgements in the README, HTML metadata and PROJECT_METADATA.json. PIX and gameplay run locally; no external AI model is called during play. Sound effects are procedural Web Audio tones, not model-generated speech or music.
+LUNARIS was conceived and created by Parsec Studio (Meiirzhan Issa and Zhasulan Zholdas). The core project concept, educational goals and creative direction are our team's. We used ChatGPT to assist selected coding, debugging, testing, research, writing, translation and refinement tasks. Image-generation tools produced fictional environment backgrounds and presentation artwork. The team selected and integrated the final materials. Generated visuals are visibly identified; code and visual assistance are acknowledged in descriptive text and project metadata. Gameplay and PIX run locally without an external AI model. Sound effects are procedural Web Audio tones; no AI-generated voice or music is used.
 
-The team is responsible for the concept, project direction, selection and integration of the final materials. Tool assistance does not replace the authorship credit of Parsec Studio.
+## Scope of assistance
 
-The SVG environment assets embed their raster content and a visible SI-GENERATED ARTWORK label. A separate canvas label remains visible when the camera moves. Documentation images identify generated backgrounds and actual gameplay. PROJECT_METADATA.json records the relevant code, imagery and audio acknowledgements.
+- **Project concept and direction:** the original LUNARIS concept belongs to Parsec Studio. The team set the educational goals, story requirements, gameplay direction and final creative choices. AI-assisted refinement of mechanics, wording and presentation does not imply that the original concept came from an AI tool.
+- **Code and testing:** ChatGPT assisted parts of implementation, debugging, automated checks and packaging.
+- **Research and text:** ChatGPT assisted resource research, explanatory writing, documentation, editing and translation.
+- **Visuals and presentation:** image-generation tools produced fictional lunar backgrounds and artwork. ChatGPT also assisted presentation wording and layout. The PDF includes actual gameplay captures as identified.
+- **Runtime and audio:** PIX is a scripted helper. No external AI model is called while playing. Sound effects are procedural Web Audio tones, not model-generated speech or music; audio implementation received code assistance.
+- **Scientific data:** no SI-generated dataset is presented as NASA measurements. Numerical scores and playable scenarios are simplified teaching models.
+
+## Visible marks and metadata
+
+The SVG environment assets embed their raster content and a visible SI-GENERATED ARTWORK label. A separate canvas label remains visible when the camera moves. Documentation images and the presentation identify generated artwork and actual gameplay. Code and visual acknowledgements appear in the README, HTML metadata and [PROJECT_METADATA.json](../PROJECT_METADATA.json). Detailed image provenance is listed in [ARTWORK.md](ARTWORK.md) and the [asset manifest](ASSET_MANIFEST.json).
