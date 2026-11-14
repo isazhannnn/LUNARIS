@@ -1,3 +1,5 @@
+[![Open the LUNARIS seven-slide presentation](demo/preview.png)](demo/LUNARIS-Demo.pdf)
+
 # LUNARIS - The Last Signal
 
 ### A lunar science adventure by Parsec Studio
@@ -6,21 +8,17 @@
 
 **Release:** 14 November 2026 · **Languages:** English / Russian · **Controls:** Keyboard / Touch
 
-| Explore the project | Public link |
-| --- | --- |
-| **1. Play the game** | **[Open LUNARIS on parsec.kz](https://parsec.kz/lunaris/)** |
-| **2. View the presentation** | **[Open the 7-slide PDF](demo/LUNARIS-Demo.pdf)** · [Download PDF](https://github.com/isazhannnn/LUNARIS/raw/refs/heads/main/demo/LUNARIS-Demo.pdf) |
-| **3. Read about the project** | **[Project brief](docs/PROJECT_OVERVIEW.md)** · [Evidence for its strengths](docs/PROJECT_STRENGTHS.md) |
-
-The game opens at its main menu. The presentation includes actual gameplay from all four science expeditions. Both are publicly accessible without an account.
-
-[![Open the LUNARIS seven-slide presentation](demo/preview.png)](demo/LUNARIS-Demo.pdf)
-
 ## The project
 
 LUNARIS is an educational browser game for school students. The crew has evacuated a damaged lunar outpost. Alex remains with PIX, a helper robot, limited resources and a broken connection to Earth. Restoring the outpost requires decisions about power, air, water, food and protection.
 
 Created for [Build a Junior Astronaut Mission Trainer](https://www.spaceappschallenge.org/2026/challenges/junior-astronaut-mission-trainer/), LUNARIS connects scientific ideas to actions and their consequences. Players walk between machines, carry materials, operate equipment, observe the result and explain their choices.
+
+**[Play the game](https://parsec.kz/lunaris/) · [View the presentation — 7 slides](demo/LUNARIS-Demo.pdf) · [Download PDF](https://github.com/isazhannnn/LUNARIS/raw/refs/heads/main/demo/LUNARIS-Demo.pdf)**
+
+[Read the project brief](docs/PROJECT_OVERVIEW.md) · [Explore its strengths and evidence](docs/PROJECT_STRENGTHS.md)
+
+The game opens at its main menu. The presentation includes actual gameplay from all four science expeditions. Both are publicly accessible without an account.
 
 ## Why LUNARIS stands out
 
