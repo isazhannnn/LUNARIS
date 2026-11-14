@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#080c12" />
+    <meta
+      name="description"
+      content="LUNARIS: The Last Signal. Restore a lunar outpost, explore science and find a way home."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Parsec Studio" />
+    <meta
+      name="si-code-assistance"
+      content="ChatGPT assisted code development, testing and debugging; human authorship and direction: Parsec Studio."
+    />
+    <meta
+      name="si-artwork"
+      content="SI-generated environments carry visible marks; see docs/AI_DISCLOSURE.md and docs/ASSET_MANIFEST.json."
+    />
+    <meta
+      name="si-audio"
+      content="Procedural Web Audio effects, no generated speech or AI audio-model service; audio code received ChatGPT assistance."
+    />
+    <meta name="release-date" content="2026-11-14" />
+    <meta name="lunaris-build" content="6.1-studio-cleanup" />
+    <title>LUNARIS · The Last Signal | Parsec Studio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3ELUNARIS%3C%2Ftitle%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23080C12%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%208h14v30h30L40%2052H10V8Z%22%20fill%3D%22%23FFB75E%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M34%208h20v20H44V18H34V8Z%22%20fill%3D%22%23F1F0E9%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+    />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/expedition.css" />
+    <link rel="stylesheet" href="css/academy-game.css" />
+    <link rel="stylesheet" href="css/academy-v6.css" />
+    <script defer src="js/engine.js"></script>
+    <script defer src="js/world.js"></script>
+    <script defer src="js/text.js"></script>
+    <script defer src="js/render.js"></script>
+    <script defer src="js/game.js"></script>
+    <script defer src="js/academy-assets.js"></script>
+    <script defer src="js/academy-play.js"></script>
+    <script defer src="js/academy-render.js"></script>
+    <script defer src="js/academy.js"></script>
+    <script defer src="js/boot.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="brand" id="brand" aria-label="LUNARIS">
+        <span class="brand-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+            <path d="M10 8h14v30h30L40 52H10V8Z" fill="#ffb75e" />
+            <path d="M34 8h20v20H44V18H34V8Z" fill="#f1f0e9" />
+          </svg>
+        </span>
+        <span>LUNARIS<small>PARSEC STUDIO</small></span>
+      </button>
+      <div class="status">
+        <i></i><span data-t="training"></span><b class="version-tag">EXPEDITIONS / 6.1</b>
+      </div>
+      <nav class="top-actions">
+        <button class="quiet" id="sound" aria-pressed="false">
+          ♪ <span data-t="soundOff"></span></button
+        ><button id="fullscreen" class="square" aria-label="Полный экран" title="F · Полный экран">
+          ⛶</button
+        ><button id="language" class="language">EN</button
+        ><button id="help" class="square" aria-label="Управление">?</button>
+      </nav>
+    </header>
+    <main id="home" class="home">
+      <div class="cover-wrap" aria-hidden="true"><canvas id="cover"></canvas></div>
+      <div class="hero">
+        <p class="eyebrow"><i></i><span data-t="team"></span></p>
+        <h1>LUNARIS<span data-t="subtitle"></span></h1>
+        <p class="tagline" data-t="tagline"></p>
+        <p class="story" data-t="intro"></p>
+        <fieldset class="mode">
+          <legend data-t="mode"></legend>
+          <label
+            ><input type="radio" name="mode" value="mission" checked /><span
+              ><strong data-t="mission"></strong><small data-t="missionDesc"></small></span></label
+          ><label
+            ><input type="radio" name="mode" value="explore" /><span
+              ><strong data-t="explore"></strong><small data-t="exploreDesc"></small></span
+          ></label>
+        </fieldset>
+        <div class="hero-buttons">
+          <button id="start" class="secondary">
+            <span data-t="start"></span><b aria-hidden="true">↗</b></button
+          ><button id="continue" class="secondary" data-t="continue" hidden></button
+          ><button id="academy-open" class="primary academy-open">
+            ✦ <span data-t="academyName"></span>
+          </button>
+        </div>
+        <div class="features">
+          <span data-t="noAccount"></span><b>·</b><span data-t="offline"></span><b>·</b
+          ><span>RU / EN</span>
+        </div>
+      </div>
+      <div class="scene-caption" aria-hidden="true">
+        <span class="signal-bars"><i></i><i></i><i></i><i></i><i></i></span
+        ><span>38.7° S / 24.8° E<br /><strong>OUTPOST 07 · LUNAR SOUTH</strong></span>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <span>01 / EXPEDITION</span><strong>LUNARIS STATION</strong><small data-t="outpost"></small>
+      </div>
+      <div class="expedition-meta">
+        <span><b>01</b><small data-t="crewLabel"></small></span
+        ><span><b>05</b><small data-t="chaptersLabel"></small></span
+        ><span><b>04</b><small data-t="labsLabel"></small></span>
+        <p data-t="homePromise"></p>
+      </div>
+      <div id="chapters" class="chapter-preview"></div>
+      <footer class="home-footer">
+        <span data-t="localSave"></span>
+        <div>
+          <button id="home-help" data-t="how"></button
+          ><button id="home-sources" data-t="sources"></button>
+        </div>
+      </footer>
+    </main>
+    <main id="game" class="game" hidden>
+      <section class="instruments">
+        <div id="resources" class="resources"></div>
+        <div class="countdown">
+          <span data-t="turns"></span><strong id="remaining"></strong>
+          <div><i id="countdown-fill"></i></div>
+        </div>
+      </section>
+      <section class="objective-row">
+        <div id="chapter-number" class="chapter-number"></div>
+        <div class="objective-copy">
+          <span id="chapter-name"></span><strong id="objective"></strong>
+        </div>
+        <div id="chapter-dots" class="dots"></div>
+        <span class="research-count" id="research-count">◇ 0/3</span
+        ><button id="pause" class="square" aria-label="Пауза">Ⅱ</button>
+      </section>
+      <div class="mission-layout">
+        <section id="stage" class="stage">
+          <canvas id="world" tabindex="0" aria-label="Игровая карта"></canvas>
+          <div class="location">
+            <i></i><span id="location-name"></span><span id="suit" hidden></span>
+          </div>
+          <div id="storm-alert" class="storm-alert" hidden></div>
+          <div id="eva-alert" class="eva-alert" hidden></div>
+          <div id="event-alert" class="event-alert" role="status" hidden></div>
+          <div class="pix">
+            <span class="pix-face" aria-hidden="true">▰</span>
+            <div>
+              <span data-t="pix"></span>
+              <p id="pix-text"></p>
+            </div>
+            <button id="lab" aria-label="Симулятор решений">∆</button
+            ><button id="hint" aria-label="Подсказка">?</button>
+          </div>
+          <div id="nearby" class="nearby"></div>
+          <div id="joystick" class="joystick" role="group" aria-label="Сенсорное управление">
+            <span class="joystick-cross" aria-hidden="true"></span
+            ><span id="joystick-knob" class="joystick-knob" aria-hidden="true"></span>
+          </div>
+          <button
+            id="touch-run"
+            class="touch-run"
+            aria-pressed="false"
+            aria-label="Быстрое движение"
+          >
+            »
+          </button>
+          <div id="stage-tip" class="stage-tip" data-t="stageTip"></div>
+        </section>
+        <aside class="mission-sidebar">
+          <div class="sidebar-label"><span data-t="missionControl"></span><i></i></div>
+          <div id="mission-timeline" class="mission-timeline"></div>
+          <button id="navigate" class="navigate">
+            <span>⌖</span><span data-t="navigate"></span><b id="target-distance"></b></button
+          ><button id="sabotage" class="sabotage-button" hidden></button>
+          <section class="transmission">
+            <div>
+              <span class="signal-bars"><i></i><i></i><i></i><i></i><i></i></span
+              ><small id="log-speaker"></small>
+            </div>
+            <h3 id="log-title"></h3>
+            <p id="log-body"></p>
+            <span id="log-time"></span>
+          </section>
+          <div class="science-chip">
+            <span>✦</span>
+            <p id="science-fact"></p>
+          </div>
+        </aside>
+      </div>
+      <section class="controls">
+        <div class="keyboard">
+          <kbd>W A S D</kbd><span data-t="move"></span><kbd>SHIFT</kbd
+          ><span data-t="runLabel"></span>
+        </div>
+        <div class="dpad">
+          <button data-dir="up" aria-label="Up">▲</button
+          ><button data-dir="left" aria-label="Left">◀</button
+          ><button data-dir="down" aria-label="Down">▼</button
+          ><button data-dir="right" aria-label="Right">▶</button>
+        </div>
+        <div class="tools">
+          <button id="scan" class="secondary compact scan-btn">
+            <b aria-hidden="true">◈</b><span data-t="scan"></span><kbd>Q</kbd></button
+          ><button id="map" class="secondary compact">
+            <b aria-hidden="true">⌖</b><span data-t="map"></span><kbd>M</kbd></button
+          ><button id="journal" class="secondary compact">
+            <b aria-hidden="true">≡</b><span data-t="journal"></span><kbd>J</kbd></button
+          ><button id="navigate-mobile" class="secondary compact" aria-label="Маршрут к цели">
+            <b aria-hidden="true">↗</b><span data-t="routeLabel"></span>
+          </button>
+        </div>
+        <button id="action" class="action">
+          <b aria-hidden="true">E</b><span data-t="action"></span>
+        </button>
+      </section>
+      <p class="model-note" data-t="units"></p>
+    </main>
+    <main id="academy" class="academy" hidden>
+      <div class="academy-shell">
+        <header class="academy-head">
+          <div>
+            <p class="academy-eyebrow">LUNARIS · PARSEC STUDIO · V6</p>
+            <h1 id="academy-title"></h1>
+            <p id="academy-counter"></p>
+          </div>
+          <button id="academy-back" class="secondary academy-small">←</button>
+        </header>
+        <section id="academy-stage"></section>
+      </div>
+    </main>
+    <main id="ending" class="ending" hidden></main>
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      hidden
+    >
+      <section class="modal-panel">
+        <header>
+          <div>
+            <p id="modal-kicker" class="eyebrow"></p>
+            <h2 id="modal-title"></h2>
+          </div>
+          <button id="modal-close" class="square" aria-label="Закрыть">×</button>
+        </header>
+        <div id="modal-body"></div>
+        <footer id="modal-buttons"></footer>
+      </section>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <section id="pix-dialogue" class="pix-dialogue" aria-label="PIX">
+      <button id="pix-dialogue-close" class="pix-dialogue-close" aria-label="Закрыть">×</button>
+      <div class="pix-portrait" aria-hidden="true">
+        <div class="pix-antenna"></div>
+        <div class="pix-head"><i></i><i></i></div>
+        <span>PIX / 07</span>
+      </div>
+      <div class="pix-speech">
+        <div class="pix-speech-header">
+          <b>PIX</b><span id="pix-glyphs" class="pix-glyphs" aria-hidden="true"></span
+          ><span class="pix-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+        <p id="pix-subtitle" role="status" aria-live="polite"></p>
+        <button id="pix-diagnose" class="mini-hint" hidden></button>
+      </div>
+    </section>
+    <div
+      id="rotate-prompt"
+      class="rotate-prompt"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rotate-title"
+      hidden
+    >
+      <div class="rotate-phone" aria-hidden="true">↻</div>
+      <p class="eyebrow">LUNARIS / MOBILE</p>
+      <h2 id="rotate-title" data-t="rotateTitle"></h2>
+      <p data-t="rotateBody"></p>
+      <button id="rotate-fullscreen" class="primary" data-t="fullscreen"></button
+      ><button id="rotate-continue" class="quiet" data-t="rotateContinue"></button>
+    </div>
+    <div id="boot-warning" role="alert" hidden>
+      <section>
+        <small>PARSEC STUDIO / BUILD V6</small>
+        <h2 id="boot-warning-title"></h2>
+        <p id="boot-warning-message"></p>
+        <button id="boot-warning-reload" class="primary"></button>
+      </section>
+    </div>
+    <noscript><p>Для игры нужен JavaScript. / Please enable JavaScript to play.</p></noscript>
+  </body>
+</html>

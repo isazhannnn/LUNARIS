@@ -1,0 +1,27 @@
+name: Project checks
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Simulation and mission checks
+        run: |
+          node tests/engine.test.cjs
+          node tests/upgrade.test.cjs
+          node tests/v4-engine.test.cjs
+          node tests/academy.test.cjs
+          node tests/academy-play.test.cjs
+          node tests/v6-challenges.test.cjs
+          node tests/boot.test.cjs
+      - name: Build and resource checks
+        run: |
+          python tests/build_assets_test.py
+          python tools/prepare_static.py
+          python tools/validate_repo.py

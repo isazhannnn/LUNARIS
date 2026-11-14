@@ -1,0 +1,104 @@
+[
+  {
+    "file": "assets/academy/water.svg",
+    "type": "AI-generated fictional water environment",
+    "visible_mark": "SI-GENERATED ARTWORK",
+    "source_sha256": "ebfc5f5519c8022f6d938bb5335318ed0c413bbed4605dcae1f7dcc07c3951d7",
+    "width": 1619,
+    "height": 971
+  },
+  {
+    "file": "assets/academy/shield.svg",
+    "type": "AI-generated fictional shield environment",
+    "visible_mark": "SI-GENERATED ARTWORK",
+    "source_sha256": "431f838192ec7e45aacd59bf3ee59a285acb3962a8b299bc028e2d84c2f1ac99",
+    "width": 1619,
+    "height": 971
+  },
+  {
+    "file": "assets/academy/comms.svg",
+    "type": "AI-generated fictional comms environment",
+    "visible_mark": "SI-GENERATED ARTWORK",
+    "source_sha256": "0f5c411c8a66f4fa7c8c6a85e80b12cc594689d21f3360fc4e4fdf82d464eb89",
+    "width": 1619,
+    "height": 971
+  },
+  {
+    "file": "assets/academy/rover.svg",
+    "type": "AI-generated fictional rover environment",
+    "visible_mark": "SI-GENERATED ARTWORK",
+    "source_sha256": "79e71925e2bee0f86ba42207563b7f78977d2909a830db03dec0772e392ed497",
+    "width": 1619,
+    "height": 971
+  },
+  {
+    "file": "docs/media/water.svg",
+    "type": "Actual water gameplay capture",
+    "visible_mark": "ACTUAL GAMEPLAY / SI-GENERATED BACKGROUND",
+    "source_sha256": "a2ee8655d60312afc7f4efd3786c64b72d6101e6b800181f329a0aa8e451bc54",
+    "width": 2160,
+    "height": 1296
+  },
+  {
+    "file": "docs/media/shield.svg",
+    "type": "Actual shield gameplay capture",
+    "visible_mark": "ACTUAL GAMEPLAY / SI-GENERATED BACKGROUND",
+    "source_sha256": "9ecbf20943582da56eaf34638c84f15c8de84268efe369a147c19100fe8dbd5d",
+    "width": 2160,
+    "height": 1296
+  },
+  {
+    "file": "docs/media/comms.svg",
+    "type": "Actual comms gameplay capture",
+    "visible_mark": "ACTUAL GAMEPLAY / SI-GENERATED BACKGROUND",
+    "source_sha256": "b985fa56069b0a497d487778949b86cc8f88fe94d85e00b2a65b140699c0b12a",
+    "width": 2160,
+    "height": 1296
+  },
+  {
+    "file": "docs/media/rover.svg",
+    "type": "Actual rover gameplay capture",
+    "visible_mark": "ACTUAL GAMEPLAY / SI-GENERATED BACKGROUND",
+    "source_sha256": "cbb813179209dd4df9c77a77ef0de7112bdfbd556766fbfe1cc975f27c4eb2b9",
+    "width": 2160,
+    "height": 1296
+  },
+  {
+    "file": "docs/media/cover.svg",
+    "type": "Fictional lunar outpost cover illustration",
+    "visible_mark": "SI-GENERATED ARTWORK",
+    "source_sha256": "909a9901bcb89c471ebe4634591f8bd4d5767d3a1110296ef125d93602473961",
+    "width": 2560,
+    "height": 1440
+  },
+  {
+    "file": "docs/media/comms.png",
+    "type": "Raster export of a visibly labelled SVG document",
+    "derived_from": "docs/media/comms.svg",
+    "sha256": "ca8082611e45927f2159b56752c9049243594da43c9af9aac3390cac11ab101c"
+  },
+  {
+    "file": "docs/media/cover.png",
+    "type": "Raster export of a visibly labelled SVG document",
+    "derived_from": "docs/media/cover.svg",
+    "sha256": "78969d0a3c0cd31a47b4f09d3737a108c1d6ea1993d5f5ddf37b2c7f4c727d44"
+  },
+  {
+    "file": "docs/media/rover.png",
+    "type": "Raster export of a visibly labelled SVG document",
+    "derived_from": "docs/media/rover.svg",
+    "sha256": "e37810e42b92c3b733c53e5124fc2c90e5b351ae5e583a0415776ddb00f1a4e8"
+  },
+  {
+    "file": "docs/media/shield.png",
+    "type": "Raster export of a visibly labelled SVG document",
+    "derived_from": "docs/media/shield.svg",
+    "sha256": "503bd8dd882567246f69172f8a1e8bb4b2ead8338781fb8dff7a867f7aee9b30"
+  },
+  {
+    "file": "docs/media/water.png",
+    "type": "Raster export of a visibly labelled SVG document",
+    "derived_from": "docs/media/water.svg",
+    "sha256": "ee37ea71f04514dc3b8ea83112b31ae46e0892e68b46fbb4f8cd9e5c19fd847f"
+  }
+]

@@ -1,0 +1,126 @@
+LUNARIS - SPACE APPS PROJECT FORM
+Team: Parsec Studio
+Release date: 14 November 2026
+Challenge: Build a Junior Astronaut Mission Trainer
+
+PROJECT NAME
+LUNARIS - The Last Signal
+
+HIGH-LEVEL PROJECT SUMMARY
+LUNARIS - The Last Signal is an educational browser game created by Parsec Studio. Players become a junior engineer at a damaged lunar outpost and make decisions about power, life support, food, radiation protection and communication. A story campaign connects these competing needs. Four playable expeditions focus on water recycling, shelter construction, radio delays and rover energy planning. Players walk between machines, carry materials, operate equipment and receive guidance from PIX. Each expedition combines practical action with a short explanation and knowledge check. The game supports keyboard and touch controls, English and Russian, and offline play. It aims to help school students understand scientific reasoning and engineering trade-offs through decisions they can see and test.
+
+PROJECT DEMONSTRATION URL
+[PASTE YOUR PUBLIC DEMO LINK HERE]
+Use an English slide deck of no more than 7 slides including the cover, or a video of no more than 30 seconds. The link must open without login or permission.
+
+FINAL PROJECT URL
+https://github.com/isazhannnn/LUNARIS
+
+DETAILED PROJECT DESCRIPTION
+LUNARIS addresses the Build a Junior Astronaut Mission Trainer challenge by turning the operation of a lunar outpost into a playable learning experience. The player controls Alex, a junior engineer who remains at a damaged station with the helper robot PIX. Restoring equipment and contact with Earth requires balancing limited resources, rather than answering unrelated science questions.
+
+The story campaign connects power, air, water, food and protection. Four additional expeditions turn specific principles into actions. In Water Recovery, players carry water between collection, filtration, purification, testing and storage stations, then balance two valves within a flow budget. In Storm Shelter, they carry two materials, compare mass and protection limits, and position panels over exposed sections. In Earth Link, they calculate round-trip signal time, tune frequency and phase, and wait for the reply. In Ice Crater, they prepare and drive a rover, avoid obstacles, drill without overheating, and reserve energy for the return journey.
+
+The learning loop is action, observation, explanation and a knowledge check. PIX offers contextual guidance. New launches vary selected conditions and questions, while completed expeditions earn locally saved badges. Keyboard movement, touch controls and English/Russian interfaces support different devices and learners. Numerical models are deliberately simplified; they are not engineering predictions, operating procedures or live space-weather forecasts.
+
+NASA resources provide the educational basis for life support, growing plants, radiation protection, light-travel time, lunar ice and the historical DONKI example. The game uses these as references; it does not import live NASA telemetry.
+
+The project uses HTML, CSS, JavaScript, Canvas 2D, Web Audio and browser local storage. It runs without an account, database, API key or external AI service. Node.js and Python support development checks and packaging. Parsec Studio created and directed the project, combining its concept and requirements with AI-assisted implementation and visibly identified generated artwork.
+
+The intended benefit is a more approachable way for school students to practise scientific reasoning, compare constraints and plan a complete mission. Classroom evaluation is a future step; improved learning outcomes have not yet been formally measured. The public repository contains source code, an offline HTML build, artwork provenance and reproducible checks.
+
+USE OF SUPER INTELLIGENCE (SI)
+LUNARIS was created and directed by Parsec Studio (Meiirzhan Issa and Zhasulan Zholdas). The team defined the concept, educational focus, story requirements and final creative decisions. ChatGPT was used as a development assistant for parts of the code, explanatory writing, tests and debugging. Image-generation tools produced fictional lunar backgrounds and cover artwork. This submission edition includes visible generation marks on those visuals, with code and asset acknowledgements in the README, HTML metadata and PROJECT_METADATA.json. PIX and gameplay run locally; no external AI model is called during play. Sound effects are procedural Web Audio tones, not model-generated speech or music.
+
+SI OPTIONS TO SELECT
+Select the actual options corresponding to image generation, code/development assistance and writing assistance. Do not choose "I did not use SI". Exact checkbox labels depend on the form.
+
+NASA DATA / RESOURCES
+
+Link text: NASA - Environmental Control and Life Support Systems (ECLSS)
+URL: https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/
+Used for: Water recovery, air revitalization and oxygen generation.
+
+Link text: NASA - Growing Plants in Space
+URL: https://www.nasa.gov/exploration-research-and-technology/growing-plants-in-space/
+Used for: Greenhouse and food-production learning activities.
+
+Link text: NASA - Hazard: Space Radiation
+URL: https://www.nasa.gov/hrp/hazard-space-radiation/
+Used for: Radiation hazards and the motivation for shelter.
+
+Link text: NASA - Real Martians: Protecting Astronauts from Space Radiation
+URL: https://www.nasa.gov/science-research/heliophysics/real-martians-how-to-protect-astronauts-from-space-radiation-on-mars/
+Used for: Shielding materials; game protection scores are fictional teaching units.
+
+Link text: NASA Science - How Does Webb See Back in Time?
+URL: https://science.nasa.gov/mission/webb/science-overview/science-explainers/how-does-webb-see-back-in-time/
+Used for: Finite light-travel time and the Earth-Moon communication lesson.
+
+Link text: NASA Science - Moon Water and Ices
+URL: https://science.nasa.gov/moon/moon-water-and-ices/
+Used for: Water ice in permanently shadowed lunar polar regions.
+
+Link text: NASA CCMC - DONKI
+URL: https://ccmc.gsfc.nasa.gov/tools/DONKI/
+Used for: Space-weather educational reference; the game does not request live measurements.
+
+Link text: NASA CCMC - May 8-14, 2024 overview
+URL: https://ccmc.gsfc.nasa.gov/TP/2024-05-TP-02/
+Used for: Source catalogue for the historical example in the science journal.
+
+Link text: NASA CCMC - Historical SEP record 30677, version 1
+URL: https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30677/1
+Used for: Historical example only; the playable storm is fictional, with no imported flux or lunar forecast.
+
+SPACE AGENCY PARTNER DATA AND OTHER REFERENCES
+
+Link text: OpenAI - ChatGPT
+URL: https://openai.com/chatgpt/
+Use: Development assistance for parts of code, explanatory writing, tests and debugging.
+
+Link text: OpenAI - image generation
+URL: https://openai.com/
+Use: Fictional location backgrounds and cover artwork, visibly marked in this edition.
+
+Link text: Node.js
+URL: https://nodejs.org/
+Use: JavaScript testing and development tools.
+
+Link text: Python
+URL: https://www.python.org/
+Use: Build, packaging and validation scripts.
+
+Link text: Prettier
+URL: https://prettier.io/
+Use: Source formatting; not a runtime dependency.
+
+Link text: ReportLab
+URL: https://www.reportlab.com/
+Use: PDF demo layout and typography.
+
+Link text: Pillow
+URL: https://python-pillow.org/
+Use: Image encoding for documentation and PDF delivery.
+
+Link text: Poppler
+URL: https://poppler.freedesktop.org/
+Use: PDF rendering and visual verification.
+
+Link text: GitHub CLI / Git
+URL: https://cli.github.com/
+Use: Repository publication tooling.
+
+Link text: Parsec Studio - LUNARIS source code
+URL: https://github.com/isazhannnn/LUNARIS
+Use: The complete submitted browser game and documentation.
+
+TEAM CREDIT
+Created by Parsec Studio. Project team: Meiirzhan Issa and Zhasulan Zholdas.
+
+RELEASE NOTE
+Release date: 14 November 2026. This identifies the submitted release; the archive does not invent or backdate a development start.
+
+SUBMITTING
+Complete the required fields, add your public demo URL, review the Terms and Conditions and originality declaration truthfully, then click Submit for Judging. Save Progress alone does not submit the project.
+Official guide: https://www.spaceappschallenge.org/resources/project-submission-guide/

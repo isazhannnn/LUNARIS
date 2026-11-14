@@ -1,0 +1,19 @@
+{
+  "project": "LUNARIS - The Last Signal",
+  "creator": "Parsec Studio",
+  "team": [
+    "Meiirzhan Issa",
+    "Zhasulan Zholdas"
+  ],
+  "release_date": "2026-11-14",
+  "challenge": "Build a Junior Astronaut Mission Trainer",
+  "si": {
+    "code": "ChatGPT assisted implementation, tests and debugging.",
+    "writing": "ChatGPT assisted bilingual explanations and documentation.",
+    "images": "Image-generation tools created fictional backgrounds and cover artwork; visible marks are included.",
+    "audio": "Procedural Web Audio tones; no AI-generated speech or model-based audio generation. Audio code received ChatGPT assistance.",
+    "data": "No SI-generated scientific dataset is presented as NASA data. Game scores and scenarios are fictional teaching models."
+  },
+  "runtime_external_ai": false,
+  "nasa_resource_use": "Educational references; historical DONKI example, no live API."
+}

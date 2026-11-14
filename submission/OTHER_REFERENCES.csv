@@ -1,0 +1,11 @@
+﻿Link text,URL,Use
+OpenAI - ChatGPT,https://openai.com/chatgpt/,"Development assistance for parts of code, explanatory writing, tests and debugging."
+OpenAI - image generation,https://openai.com/,"Fictional location backgrounds and cover artwork, visibly marked in this edition."
+Node.js,https://nodejs.org/,JavaScript testing and development tools.
+Python,https://www.python.org/,"Build, packaging and validation scripts."
+Prettier,https://prettier.io/,Source formatting; not a runtime dependency.
+ReportLab,https://www.reportlab.com/,PDF demo layout and typography.
+Pillow,https://python-pillow.org/,Image encoding for documentation and PDF delivery.
+Poppler,https://poppler.freedesktop.org/,PDF rendering and visual verification.
+GitHub CLI / Git,https://cli.github.com/,Repository publication tooling.
+Parsec Studio - LUNARIS source code,https://github.com/isazhannnn/LUNARIS,The complete submitted browser game and documentation.

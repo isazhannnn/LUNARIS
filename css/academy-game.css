@@ -1,0 +1,872 @@
+/* Walkable science missions · Parsec Studio */
+.pix-dialogue {
+  pointer-events: none;
+}
+.pix-dialogue.visible {
+  pointer-events: auto;
+}
+.academy.is-playing {
+  padding: 20px 3vw 16px;
+  min-height: calc(100dvh - var(--header));
+  background: #080d14;
+}
+.academy.is-playing .academy-shell {
+  max-width: 1500px;
+}
+.academy.is-playing .academy-head {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  gap: 20px;
+}
+.academy.is-playing .academy-head h1 {
+  font-size: 26px;
+  margin: 5px 0 7px;
+}
+.academy.is-playing .academy-head p:last-child {
+  font:
+    9px Consolas,
+    monospace;
+}
+.academy.is-playing .academy-eyebrow {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.academy.is-playing .academy-level-header {
+  margin-bottom: 11px;
+}
+.academy.is-playing .academy-level-index {
+  font-size: 9px;
+}
+.academy.is-playing .academy-intro {
+  font-size: 12px;
+  margin-bottom: 12px;
+  max-width: 1000px;
+}
+.academy.is-playing .academy-scenario {
+  font-size: 11px;
+  padding: 10px 14px;
+  margin-bottom: 13px;
+}
+.academy.is-playing .academy-learning-meter {
+  margin: 10px 0 13px;
+}
+.academy.is-playing .academy-learning-meter span {
+  font-size: 8px;
+  padding: 6px 10px;
+}
+.academy-playground {
+  position: relative;
+  overflow: hidden;
+  min-height: 390px;
+  aspect-ratio: 5/3;
+  width: 100%;
+  background: #0b1721;
+  border: 1px solid #ffffff22;
+  border-radius: 9px;
+  isolation: isolate;
+  box-shadow: 0 16px 55px #0004;
+}
+.academy-playground:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 90px #030b1444;
+  pointer-events: none;
+}
+#academy-play-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  outline-offset: -3px;
+  position: absolute;
+  inset: 0;
+  image-rendering: auto;
+}
+.academy-game-hud {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  z-index: 2;
+  pointer-events: none;
+}
+.academy-game-hud > div,
+.academy-game-hud > p {
+  margin: 0;
+}
+.academy-game-hud #academy-objective {
+  display: block;
+  max-width: min(580px, 70vw);
+  background: #0a1723ef;
+  border: 1px solid #ffb75e44;
+  border-left: 2px solid #ffb75e;
+  padding: 11px 15px;
+  border-radius: 5px;
+  color: #f3e6d1;
+  font-size: 12px;
+  line-height: 1.6;
+  box-shadow: 0 7px 25px #0004;
+  backdrop-filter: blur(10px);
+}
+#academy-nearby {
+  background: #132e26ee;
+  border: 1px solid #98e7c266;
+  color: #c6f3d9;
+  font:
+    11px/1.6 Consolas,
+    monospace;
+  border-radius: 5px;
+  padding: 9px 12px;
+  text-align: right;
+  max-width: 260px;
+}
+#academy-nearby:empty {
+  display: none;
+}
+.academy-game-inventory {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+  border: 1px solid #ffffff22;
+  background: #0c1825ef;
+  border-radius: 5px;
+  padding: 10px 14px;
+  max-width: 310px;
+  color: #bcd4dd;
+  font:
+    11px/1.6 Consolas,
+    monospace;
+  backdrop-filter: blur(10px);
+}
+.academy-game-inventory:empty {
+  display: none;
+}
+.academy-game-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: #111d29;
+  border: 1px solid #ffffff18;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  min-height: 65px;
+}
+.academy-game-controls kbd {
+  font:
+    9px Consolas,
+    monospace;
+  padding: 5px 7px;
+  border-color: #ffffff22;
+  background: #1b2b39;
+  color: #b7c6d0;
+}
+.academy-game-controls .academy-control-help {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex: 1;
+  color: #8199aa;
+  font-size: 10px;
+}
+.academy-game-controls > button {
+  min-height: 40px;
+  padding: 10px 16px;
+  font-size: 11px;
+  border-radius: 5px;
+}
+#academy-interact {
+  min-width: 180px;
+  max-width: 310px;
+  margin-left: auto;
+  background: #ffb75e;
+  color: #251a0e;
+  border: 1px solid #ffb75e;
+  font-weight: 700;
+  box-shadow: 0 5px 20px #ffb75e16;
+}
+#academy-interact:disabled {
+  background: #243340;
+  color: #a0b0b8;
+  border-color: #ffffff1c;
+  opacity: 0.7;
+}
+#academy-reset,
+#academy-hint-button {
+  background: #1b2b39;
+  border: 1px solid #ffffff22;
+  color: #c1d2dd;
+}
+.academy-gamework {
+  padding: 16px 18px;
+  background: #121e2a;
+  border: 1px solid #ffffff18;
+  border-radius: 7px;
+  margin: 13px 0 0;
+  color: #a9c1ce;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.academy-gamework #academy-task {
+  font-size: 12px;
+  color: #c9dbe3;
+  line-height: 1.8;
+}
+.academy-gamework p {
+  margin: 0 0 8px;
+  font-size: 11px;
+}
+.academy-gamework p:last-child {
+  margin-bottom: 0;
+}
+.academy-gamework .academy-message {
+  min-height: 0;
+  margin: 7px 0 0;
+  font-size: 11px;
+  color: #ffd3a1;
+}
+.academy-gamework .academy-message:empty {
+  display: none;
+}
+.academy-gamework .academy-scenario {
+  margin: 10px 0 0;
+}
+.academy-gamework .academy-range {
+  margin: 12px 0;
+  height: 32px;
+}
+.academy-gamework .academy-actions {
+  margin: 12px 0 0;
+}
+.academy-gamework .academy-live-model {
+  margin: 9px 0;
+}
+.academy-gamework h3 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+#academy-joystick {
+  display: none;
+}
+.academy-game-panel {
+  position: absolute;
+  z-index: 4;
+  inset: 18% 15%;
+  padding: 23px;
+  background: #101e2cf7;
+  border: 1px solid #ffb75e55;
+  border-radius: 9px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 70px #0009;
+  overflow: auto;
+  color: #d1dce4;
+}
+.academy-game-panel h3 {
+  font-size: 19px;
+  color: #f1ece3;
+}
+.academy-game-panel p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.academy-game-panel input {
+  accent-color: #ffb75e;
+}
+.academy-game-panel .primary {
+  font-size: 12px;
+  min-height: 42px;
+}
+@media (min-width: 1100px) {
+  .academy.is-playing .academy-playground {
+    max-height: 650px;
+    aspect-ratio: 5/3;
+  }
+  .academy.is-playing #academy-stage {
+    position: relative;
+  }
+  .academy.is-playing .academy-work {
+    padding: 0;
+    background: none;
+    border: 0;
+    margin: 0;
+  }
+  .academy.is-playing .academy-gamework {
+    padding: 13px 17px;
+  }
+  .academy.is-playing .academy-scenario {
+    max-width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .academy.is-playing {
+    padding: 13px 12px;
+  }
+  .academy.is-playing .academy-head {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+  .academy.is-playing .academy-head h1 {
+    font-size: 22px;
+  }
+  .academy.is-playing .academy-head .academy-small {
+    max-width: 110px;
+    font-size: 9px;
+  }
+  .academy-playground {
+    min-height: 330px;
+    aspect-ratio: 4/3;
+    border-radius: 7px;
+  }
+  .academy-game-hud {
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    gap: 10px;
+  }
+  .academy-game-hud #academy-objective {
+    font-size: 10px;
+    padding: 8px 10px;
+    max-width: 70%;
+  }
+  #academy-nearby {
+    font-size: 8px;
+    padding: 7px 9px;
+    max-width: 40%;
+  }
+  .academy-game-inventory {
+    bottom: 12px;
+    right: 12px;
+    max-width: 50%;
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+  .academy-game-controls {
+    gap: 7px;
+    padding: 9px 10px;
+    min-height: 60px;
+  }
+  .academy-game-controls > button {
+    font-size: 10px;
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+  .academy-game-controls .academy-control-help {
+    display: none;
+  }
+  #academy-interact {
+    min-width: 145px;
+    max-width: 60%;
+  }
+  .academy-gamework {
+    padding: 13px 14px;
+    font-size: 11px;
+  }
+  .academy-game-panel {
+    inset: 12% 8%;
+    padding: 17px;
+  }
+  .academy-game-panel h3 {
+    font-size: 16px;
+  }
+  .academy-game-panel p {
+    font-size: 11px;
+  }
+}
+.touch-device #academy-joystick {
+  display: block;
+  position: absolute;
+  left: max(18px, env(safe-area-inset-left));
+  bottom: 18px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d3e0e744;
+  border-radius: 50%;
+  background: #14233166;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 20px #adcbe009;
+}
+.touch-device #academy-joystick:before,
+.touch-device #academy-joystick:after {
+  position: absolute;
+  content: '';
+  background: #c1dce522;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 1px;
+}
+.touch-device #academy-joystick:after {
+  height: 60%;
+  width: 1px;
+}
+#academy-stick-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 43px;
+  height: 43px;
+  background: #91a8b66b;
+  border: 1px solid #d1e2eb77;
+  border-radius: 50%;
+  box-shadow: 0 2px 18px #0004;
+}
+.academy-joystick-held #academy-stick-knob,
+#academy-joystick.held #academy-stick-knob {
+  background: #c5915488;
+  border-color: #ffd5a0aa;
+}
+@media (max-width: 420px) {
+  .academy.is-playing {
+    padding: 10px;
+  }
+  .academy.is-playing .academy-head h1 {
+    font-size: 20px;
+  }
+  .academy.is-playing .academy-intro {
+    font-size: 11px;
+  }
+  .academy.is-playing .academy-scenario {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+  .academy-playground {
+    min-height: 360px;
+    aspect-ratio: 1;
+  }
+  .academy-game-hud {
+    display: block;
+  }
+  .academy-game-hud #academy-objective {
+    max-width: 100%;
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+  #academy-nearby {
+    max-width: 100%;
+    display: inline-block;
+    margin-top: 7px;
+    font-size: 8px;
+  }
+  .academy-game-inventory {
+    bottom: 15px;
+    right: 10px;
+    max-width: 55%;
+    font-size: 8px;
+  }
+  .touch-device #academy-joystick {
+    left: 12px;
+    bottom: 15px;
+    width: 86px;
+    height: 86px;
+  }
+  #academy-stick-knob {
+    width: 37px;
+    height: 37px;
+  }
+  .academy-game-controls {
+    gap: 5px;
+    padding: 8px;
+  }
+  .academy-game-controls > button {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+  #academy-interact {
+    min-width: 125px;
+    max-width: 60%;
+  }
+  .academy-gamework {
+    font-size: 10px;
+    padding: 11px;
+  }
+  .academy-game-panel {
+    inset: 15% 5%;
+    padding: 14px;
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .academy.is-playing {
+    padding: 8px 12px;
+  }
+  .academy.is-playing .academy-head {
+    margin-bottom: 7px;
+    padding-bottom: 8px;
+  }
+  .academy.is-playing .academy-head h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .academy.is-playing .academy-eyebrow,
+  .academy.is-playing #academy-counter {
+    display: none;
+  }
+  .academy.is-playing .academy-head .academy-small {
+    font-size: 8px;
+    min-height: 28px;
+    padding: 6px 9px;
+  }
+  .academy.is-playing .academy-level-header {
+    margin-bottom: 6px;
+  }
+  .academy.is-playing .academy-level-header .academy-small {
+    font-size: 8px;
+    min-height: 28px;
+    padding: 6px 9px;
+  }
+  .academy.is-playing .academy-learning-meter,
+  .academy.is-playing .academy-intro,
+  .academy.is-playing .academy-scenario {
+    display: none;
+  }
+  .academy.is-playing .academy-work {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+  }
+  .academy-playground {
+    height: calc(100dvh - 190px);
+    min-height: 170px;
+    max-height: 450px;
+    aspect-ratio: auto;
+    border-radius: 5px;
+  }
+  .academy-game-hud {
+    left: 9px;
+    right: 9px;
+    top: 8px;
+    display: flex;
+  }
+  .academy-game-hud #academy-objective {
+    font-size: 8px;
+    max-width: 64%;
+    padding: 6px 9px;
+    line-height: 1.5;
+  }
+  #academy-nearby {
+    font-size: 7px;
+    padding: 6px 8px;
+    max-width: 35%;
+    margin-top: 0;
+  }
+  .academy-game-inventory {
+    right: 10px;
+    bottom: 9px;
+    font-size: 8px;
+    padding: 6px 9px;
+    max-width: 40%;
+  }
+  .academy-game-controls {
+    height: 42px;
+    min-height: 42px;
+    padding: 5px 9px;
+    gap: 8px;
+  }
+  .academy-game-controls > button {
+    font-size: 8px;
+    min-height: 29px;
+    padding: 6px 10px;
+  }
+  #academy-interact {
+    min-width: 160px;
+  }
+  .touch-device #academy-joystick {
+    left: 15px;
+    bottom: 10px;
+    width: 76px;
+    height: 76px;
+  }
+  #academy-stick-knob {
+    width: 33px;
+    height: 33px;
+  }
+  .academy-gamework {
+    padding: 8px 11px;
+    margin-top: 7px;
+    font-size: 9px;
+  }
+  .academy-gamework #academy-task,
+  .academy-gamework p,
+  .academy-gamework .academy-message {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+  .academy-game-panel {
+    inset: 7% 15%;
+    padding: 13px;
+  }
+  .academy-game-panel h3 {
+    font-size: 15px;
+    margin-bottom: 9px;
+  }
+  .academy-game-panel p {
+    font-size: 10px;
+  }
+  .academy-game-panel .primary {
+    font-size: 10px;
+    min-height: 32px;
+    padding: 7px 10px;
+  }
+}
+/* Controls live over the canvas; utility actions remain below the scene. */
+.academy-playground > .academy-game-controls {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  min-height: 0;
+  height: auto;
+  pointer-events: none;
+  z-index: 3;
+}
+.academy-playground #academy-interact {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  pointer-events: auto;
+  min-height: 44px;
+  padding: 11px 18px;
+  min-width: 175px;
+  max-width: 310px;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: normal;
+}
+.academy-playground #academy-joystick {
+  pointer-events: auto;
+}
+.academy-playground .academy-game-inventory {
+  bottom: 82px;
+  right: 18px;
+}
+.academy-game-pix {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.academy-game-pix > b {
+  font:
+    10px Consolas,
+    monospace;
+  color: #ffb75e;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+.academy-game-pix p {
+  flex: 1;
+  margin: 0;
+  color: #bacdd8;
+}
+.academy-game-utility {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid #ffffff10;
+}
+.academy-game-utility button {
+  min-height: 36px;
+  font-size: 10px;
+  padding: 7px 12px;
+}
+.academy-game-keyhelp {
+  margin-left: auto;
+  font:
+    9px Consolas,
+    monospace;
+  color: #7f99aa;
+  line-height: 1.7;
+}
+.academy-material-data {
+  display: inline-block;
+  padding: 8px 11px;
+  border: 1px solid #ffffff18;
+  border-radius: 4px;
+  background: #1b2d3b;
+  font:
+    10px/1.6 Consolas,
+    monospace;
+  margin: 3px 5px 3px 0;
+  color: #aabfcd;
+}
+.academy-material-data.on {
+  background: #2b4235;
+  border-color: #98e7c255;
+  color: #c5e7d1;
+}
+.academy-console {
+  max-width: 650px;
+  padding: 15px;
+  background: #1a2d3b;
+  border: 1px solid #ffb75e55;
+  border-radius: 7px;
+}
+.academy-console > strong {
+  display: block;
+  font-size: 13px;
+  color: #f0d3ac;
+  margin-bottom: 8px;
+}
+.academy-console .academy-range-label {
+  font-size: 11px;
+}
+.academy-console > button {
+  min-height: 38px;
+  font-size: 11px;
+  padding: 9px 14px;
+  margin: 7px 8px 0 0;
+}
+.academy-mission-shortcuts {
+  margin-top: 15px;
+  border: 1px solid #ffffff18;
+  border-radius: 6px;
+  background: #101b27;
+  padding: 13px;
+}
+.academy-mission-shortcuts summary {
+  cursor: pointer;
+  font-size: 11px;
+  color: #b9cdd8;
+  padding: 4px;
+}
+.academy-mission-shortcuts .academy-cards {
+  margin-top: 15px;
+}
+.academy-mission-shortcuts:not([open]) .academy-cards {
+  display: none;
+}
+@media (max-width: 800px) {
+  .academy-playground #academy-interact {
+    right: 12px;
+    bottom: 13px;
+    min-height: 42px;
+    min-width: 140px;
+    max-width: 50%;
+    font-size: 10px;
+    padding: 9px 13px;
+  }
+  .academy-playground .academy-game-inventory {
+    bottom: 72px;
+    right: 12px;
+    font-size: 8px;
+    max-width: 55%;
+  }
+  .academy-game-keyhelp {
+    display: none;
+  }
+  .academy-material-data {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+  .academy-game-pix {
+    gap: 10px;
+  }
+  .academy-game-pix > b {
+    font-size: 8px;
+  }
+  .academy-console {
+    padding: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .academy-playground #academy-interact {
+    right: 10px;
+    bottom: 16px;
+    min-width: 125px;
+    max-width: 53%;
+    font-size: 9px;
+    min-height: 42px;
+  }
+  .academy-playground .academy-game-inventory {
+    bottom: 76px;
+    right: 10px;
+    font-size: 8px;
+  }
+  .academy-game-utility {
+    gap: 6px;
+    margin-top: 9px;
+    padding-top: 9px;
+  }
+  .academy-game-utility button {
+    font-size: 9px;
+    min-height: 34px;
+    padding: 7px 10px;
+  }
+  .academy-material-data {
+    font-size: 8px;
+  }
+  .academy-gamework #academy-task {
+    font-size: 10px;
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .academy-playground #academy-interact {
+    bottom: 10px;
+    right: 12px;
+    min-height: 36px;
+    min-width: 150px;
+    max-width: 38%;
+    font-size: 9px;
+    padding: 8px 11px;
+  }
+  .academy-playground .academy-game-inventory {
+    bottom: 55px;
+    right: 12px;
+    padding: 5px 8px;
+    font-size: 7px;
+    max-width: 40%;
+  }
+  .academy-game-pix {
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  .academy-game-utility {
+    margin-top: 6px;
+    padding-top: 7px;
+  }
+  .academy-game-utility button {
+    min-height: 28px;
+    font-size: 8px;
+    padding: 5px 9px;
+  }
+  .academy-material-data {
+    font-size: 8px;
+    padding: 5px 8px;
+    margin: 2px 4px 2px 0;
+  }
+  .academy-console {
+    padding: 10px;
+  }
+  .academy-console > strong {
+    font-size: 11px;
+  }
+  .academy-console > button {
+    min-height: 30px;
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .academy-playground * {
+    scroll-behavior: auto !important;
+  }
+}
