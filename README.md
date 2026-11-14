@@ -10,6 +10,8 @@
 
 ## The project
 
+Our aim is simple: open the website, start playing and explore how a lunar outpost works. No download, installation or specialist background is needed to begin. Short explanations and PIX's hints help players work through each task. LUNARIS is intended for school students and anyone curious about space.
+
 LUNARIS is an educational browser game for school students. The crew has evacuated a damaged lunar outpost. Alex remains with PIX, a helper robot, limited resources and a broken connection to Earth. Restoring the outpost requires decisions about power, air, water, food and protection.
 
 Created for [Build a Junior Astronaut Mission Trainer](https://www.spaceappschallenge.org/2026/challenges/junior-astronaut-mission-trainer/), LUNARIS connects scientific ideas to actions and their consequences. Players walk between machines, carry materials, operate equipment, observe the result and explain their choices.
@@ -40,6 +42,12 @@ The game opens at its main menu. The presentation includes actual gameplay from 
 | Ice Crater | Prepare and drive a rover, drill for ice, and return with energy left. | Route planning, heat and energy budgets. |
 
 The story campaign connects station systems and resource choices. PIX supplies contextual guidance. Completing an expedition leads to a scientific explanation and a knowledge check. Badges and progress are stored in the browser.
+
+## First playtests
+
+In informal playtesting, our friends and acquaintances completed all four science missions and Alex's story without help from our team. When they were unsure how to proceed, they used PIX's in-game hints.
+
+[Read the playtesting note](docs/PLAYTESTING.md)
 
 ## Team and original concept
 

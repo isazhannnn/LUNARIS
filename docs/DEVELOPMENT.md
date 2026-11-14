@@ -18,3 +18,7 @@ Run `python -m http.server 8000` from the repository root and open `http://local
 - `python tools/validate_repo.py`
 
 The test suite also covers story rules, hazards, navigation, mission completion, resource constraints and mobile controls. GitHub Actions runs the model and build checks on each push. `.prettierrc.json` defines source formatting.
+
+## Informal playtesting
+
+Parsec Studio reports that friends and acquaintances completed all four science missions and Alex's story without help from the team. When they were unsure how to proceed, they used PIX's in-game hints. The [team's playtest report](PLAYTESTING.md) records this early feedback; classroom learning outcomes have not yet been formally evaluated.

@@ -22,5 +22,29 @@
   "presentation": "https://github.com/isazhannnn/LUNARIS/blob/main/demo/LUNARIS-Demo.pdf",
   "source_code": "https://github.com/isazhannnn/LUNARIS",
   "original_concept": "Parsec Studio: Meiirzhan Issa and Zhasulan Zholdas.",
-  "team_contribution": "Core project concept, educational goals, story requirements, gameplay direction and final creative decisions."
+  "team_contribution": "Core project concept, educational goals, story requirements, gameplay direction and final creative decisions.",
+  "intended_audience": [
+    "School students",
+    "Anyone curious about space"
+  ],
+  "learning_goal": "Make lunar science approachable through browser play, short explanations and contextual PIX hints.",
+  "entry_requirements": {
+    "download_required": false,
+    "installation_required": false,
+    "specialist_scientific_background_required": false
+  },
+  "playtesting": {
+    "type": "Informal playtesting",
+    "reported_by": "Parsec Studio",
+    "participants": "Friends and acquaintances of the team",
+    "reported_results": [
+      "Completed all four science missions",
+      "Completed Alex's story",
+      "No help from the team was needed during completion",
+      "Used PIX's in-game hints when unsure how to proceed"
+    ],
+    "participant_count": null,
+    "classroom_learning_outcomes_measured": false,
+    "report": "docs/PLAYTESTING.md"
+  }
 }
