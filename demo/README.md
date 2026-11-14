@@ -1,9 +1,11 @@
-# Project demonstration
+# LUNARIS - Project presentation
 
-[Open the seven-slide English demo](LUNARIS-Demo.pdf).
+**[View PDF](LUNARIS-Demo.pdf) · [Download PDF](https://github.com/isazhannnn/LUNARIS/raw/refs/heads/main/demo/LUNARIS-Demo.pdf) · [Play the live game](https://parsec.kz/lunaris/)**
 
-Created by Parsec Studio. Project team: Meiirzhan Issa and Zhasulan Zholdas.
+[![Open the seven-slide LUNARIS presentation](preview.png)](LUNARIS-Demo.pdf)
 
-The deck has seven pages including the cover, uses actual gameplay captures and visibly identifies generated artwork. It is approximately 5 MB. The cover and lunar environments are fictional illustrations, not documentary NASA photographs. No NASA agency logo, agency flag or official mission identifier is used. The generation prompts are included in `GENERATION_PROMPTS.json`.
+Seven English slides introduce the project, its learning approach, four playable science expeditions, NASA references and the team. Gameplay captures show the running game; generated environment illustrations are visibly identified. The presentation is included as a public PDF of approximately 5 MB.
 
-You may use another qualifying public demo. Paste its URL into the Project Demonstration field yourself; the draft form intentionally leaves that field for you.
+**Created by Parsec Studio. Project team: Meiirzhan Issa and Zhasulan Zholdas.**
+
+The [generation prompts](GENERATION_PROMPTS.json) document the fictional concept artwork. Full project details are in the [main README](../README.md).

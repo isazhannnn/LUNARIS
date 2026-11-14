@@ -1,80 +1,61 @@
 # LUNARIS - The Last Signal
 
-**Created by Parsec Studio**  
-**Project team: Meiirzhan Issa and Zhasulan Zholdas**  
-Release date: **14 November 2026**
+### A lunar science adventure by Parsec Studio
 
-![LUNARIS fictional lunar outpost cover; SI-generated artwork](docs/media/cover.png)
+**[Play online](https://parsec.kz/lunaris/) · [View presentation (PDF, 7 slides)](demo/LUNARIS-Demo.pdf) · [Download PDF](https://github.com/isazhannnn/LUNARIS/raw/refs/heads/main/demo/LUNARIS-Demo.pdf)**
 
-A browser game where school students learn to keep a lunar outpost alive. Control Alex, work with PIX, repair equipment and balance power, air, water, food and protection.
+**Project team:** Meiirzhan Issa and Zhasulan Zholdas · **Parsec Studio**  
+**Release:** 14 November 2026 · **Languages:** English / Russian · **Controls:** Keyboard / Touch
 
-Built for [Build a Junior Astronaut Mission Trainer](https://www.spaceappschallenge.org/2026/challenges/junior-astronaut-mission-trainer/).
+[![Open the LUNARIS seven-slide project presentation](demo/preview.png)](demo/LUNARIS-Demo.pdf)
 
-## Play
+## The project
 
-1. Download this repository with **Code > Download ZIP** and extract it.
-2. Open **LUNARIS-Play.html** in a desktop browser. Its code, styles and marked artwork are embedded, so it also works offline.
-3. The game opens at the main menu. Choose the story or press **Play expeditions** to select a science mission. Direct mission links remain available.
+LUNARIS is an educational browser game where school students learn to keep a lunar outpost alive. The crew has evacuated. Alex remains at the damaged station with PIX, a helper robot, limited resources and a broken connection to Earth. Restoring the outpost requires decisions about power, air, water, food and protection.
 
-To run the source edition, start `python -m http.server 8000` in the repository and open `http://localhost:8000/`. A hosted copy works on phones. No account, API key, database or dependency installation is needed to play.
+Created for [Build a Junior Astronaut Mission Trainer](https://www.spaceappschallenge.org/2026/challenges/junior-astronaut-mission-trainer/), the game connects scientific ideas to actions and their consequences. Players walk between machines, carry materials, operate equipment, observe the result and explain their choices.
 
-The submission edition starts in English and also offers Russian. Starting play requests fullscreen and landscape mode on supported phones; when the browser declines, rotate the device manually.
+The live game is available at **[https://parsec.kz/lunaris/](https://parsec.kz/lunaris/)**. It opens at the main menu and runs in a browser without registration or installation. The story and science expeditions are available from that menu.
 
-## Four playable expeditions
+## Project presentation
 
-| Mission | What the player does | Learning focus |
+The **[seven-slide English presentation](demo/LUNARIS-Demo.pdf)** introduces the learning approach, demonstrates all four expeditions with actual gameplay captures, and presents the scientific references and team. The PDF is included in this repository and can be viewed or downloaded directly.
+
+## Four science expeditions
+
+| Expedition | Player activity | Learning focus |
 | --- | --- | --- |
-| Water Recovery | Carry water through five stations; set two valves; test before storage. | Process order and constrained flow. |
+| Water Recovery | Carry water through five stations; balance two valves; test before storage. | Process order and constrained flow. |
 | Storm Shelter | Carry two materials and fit panels over exposed sections. | Mass/protection trade-offs and geometry. |
 | Earth Link | Calculate round-trip time, tune frequency and phase, and wait for a reply. | Finite signal speed and calibration. |
 | Ice Crater | Prepare and drive a rover, drill for ice, and return with energy left. | Route planning, heat and energy budgets. |
 
-![Water Recovery - actual gameplay with SI-generated environment](docs/media/water.png)
-![Storm Shelter - actual gameplay with SI-generated environment](docs/media/shield.png)
-![Earth Link - actual gameplay with SI-generated environment](docs/media/comms.png)
-![Ice Crater - actual gameplay with SI-generated environment](docs/media/rover.png)
+![Water Recovery: actual gameplay](docs/media/water.png)
+![Storm Shelter: actual gameplay](docs/media/shield.png)
+![Earth Link: actual gameplay](docs/media/comms.png)
+![Ice Crater: actual gameplay](docs/media/rover.png)
 
-The story campaign connects station systems and resource choices. PIX supplies contextual guidance. Conditions and questions vary between launches; completing a physical task leads to a science explanation and knowledge check. Badges and progress are stored in the browser.
+The story campaign connects station systems and resource choices. PIX supplies contextual guidance. Selected conditions and questions vary between launches; completing a physical task leads to an explanation and knowledge check. Badges and progress are stored in the browser.
 
-## Controls
+## Scientific basis
 
-WASD or arrow keys move the hero; E interacts with nearby equipment. Tap/click navigation and a touch joystick support phones. The controls also drive the rover after boarding. The in-game help explains other shortcuts.
+The project draws on [nine NASA resources](docs/NASA_SOURCES.md) covering life support, plants in space, radiation hazards, shielding, signal travel time, lunar ice and a historical DONKI example. These resources inform the educational explanations. The game uses simplified teaching models and does not provide live telemetry, engineering operating procedures or a space-weather forecast. Classroom learning outcomes have not yet been formally evaluated.
 
-## NASA resources and model limits
+## Team and implementation
 
-The game uses NASA resources on ECLSS, plants in space, radiation hazards, shielding, light-travel time, lunar ice and a historical DONKI example. [All nine resources and their use](docs/NASA_SOURCES.md) are documented. This is educational reference use, not a live NASA API integration.
+**Parsec Studio created and directed LUNARIS.** Project team: **Meiirzhan Issa** and **Zhasulan Zholdas**. The team defined the concept, educational focus, story requirements and final creative decisions.
 
-Resources, material scores, compressed time, hazard cycles and routes are simplified teaching models. They are not engineering operating procedures, real radiation-dose estimates or a space-weather forecast. Classroom learning outcomes have not yet been formally evaluated.
+The game uses HTML, CSS, JavaScript, Canvas 2D, Web Audio and browser local storage. It supports keyboard and touch controls, English and Russian, and an offline HTML edition. Gameplay and PIX run locally without an external AI model.
 
-## Team and tools
+Tool assistance and generated visual assets are identified in [the project acknowledgements](docs/AI_DISCLOSURE.md), [artwork provenance](docs/ARTWORK.md), [asset manifest](docs/ASSET_MANIFEST.json) and [structured metadata](PROJECT_METADATA.json). Generated imagery carries visible marks. [Other references](docs/OTHER_REFERENCES.md) are documented separately.
 
-Parsec Studio created and directed LUNARIS. The team defined the concept, learning focus, story requirements and final creative decisions. ChatGPT supported parts of implementation, explanatory writing, testing and debugging; image-generation tools produced fictional backgrounds and cover artwork. Visible marks identify generated visuals in this submission edition. See [tool assistance](docs/AI_DISCLOSURE.md), [asset provenance](docs/ARTWORK.md), [asset manifest](docs/ASSET_MANIFEST.json) and [structured metadata](PROJECT_METADATA.json).
+## Project materials
 
-Gameplay and PIX run locally without an external AI model. Audio consists of procedural Web Audio effects; there is no generated voice or model-based music service. [Other tools and references](docs/OTHER_REFERENCES.md) are listed separately.
+- [Live browser game](https://parsec.kz/lunaris/)
+- [Presentation PDF](demo/LUNARIS-Demo.pdf)
+- [Detailed project overview](docs/PROJECT_OVERVIEW.md)
+- [NASA resources](docs/NASA_SOURCES.md)
+- [Team credits](AUTHORS.md)
+- [Development and validation](docs/DEVELOPMENT.md)
 
-## Source layout
-
-```text
-index.html                Browser source entry
-LUNARIS-Play.html          Self-contained offline release
-js/                       Simulation, navigation, rendering, UI and translations
-css/                      Responsive styles
-assets/academy/           Four visibly marked SVG environment assets
-assets/brand/             Signal L vector logo and favicon
-docs/                     NASA references, provenance and screenshots
-submission/               Ready-to-copy project fields and resource tables
-demo/                     Seven-slide English demo
-tests/                    Model, build and browser checks
-tools/                    Standard-library build scripts
-PROJECT_METADATA.json     Authorship, release and SI acknowledgements
-```
-
-## Build and checks
-
-Run `python tools/build_standalone.py` for the offline file and `python tools/prepare_static.py` for `dist/`. Development checks use Node.js and Python; the browser runtime does not need them. Run `node tests/boot.test.cjs`, `node tests/v6-challenges.test.cjs`, `python tests/build_assets_test.py` and `python tools/validate_repo.py`. Additional story, navigation, hazard and playable-mission tests are in `tests/`.
-
-## Space Apps submission
-
-Use **https://github.com/isazhannnn/LUNARIS** as the public final-project link. [Ready-to-copy form fields](submission/PROJECT_FORM.en.txt) include the summary, detailed description, SI explanation and every resource URL. Add your public demo URL to the form yourself. A seven-slide English PDF is included in `demo/`; you can use another qualifying demo if you prefer.
-
-Public links must open without a login or permission request. Submit through the Space Apps team Project page; uploading to GitHub alone does not submit the entry. [Official submission guide](https://www.spaceappschallenge.org/resources/project-submission-guide/).
+[Русское описание](README.ru.md)

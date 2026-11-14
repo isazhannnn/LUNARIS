@@ -100,5 +100,12 @@
     "type": "Raster export of a visibly labelled SVG document",
     "derived_from": "docs/media/water.svg",
     "sha256": "ee37ea71f04514dc3b8ea83112b31ae46e0892e68b46fbb4f8cd9e5c19fd847f"
+  },
+  {
+    "file": "demo/preview.png",
+    "type": "First-page PDF preview",
+    "source_pdf": "demo/LUNARIS-Demo.pdf",
+    "visible_mark": "AI-GENERATED ARTWORK",
+    "sha256": "9f9babb617e86cc99bb3fe77775dedaa86dcbd0676aa495907c4a025d473a7a3"
   }
 ]

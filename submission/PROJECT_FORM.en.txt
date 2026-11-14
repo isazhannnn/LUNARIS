@@ -1,7 +1,11 @@
-LUNARIS - SPACE APPS PROJECT FORM
-Team: Parsec Studio
-Release date: 14 November 2026
-Challenge: Build a Junior Astronaut Mission Trainer
+LUNARIS - PROJECT INFORMATION
+
+CREATOR
+Parsec Studio
+Meiirzhan Issa and Zhasulan Zholdas
+
+RELEASE DATE
+14 November 2026
 
 PROJECT NAME
 LUNARIS - The Last Signal
@@ -9,11 +13,13 @@ LUNARIS - The Last Signal
 HIGH-LEVEL PROJECT SUMMARY
 LUNARIS - The Last Signal is an educational browser game created by Parsec Studio. Players become a junior engineer at a damaged lunar outpost and make decisions about power, life support, food, radiation protection and communication. A story campaign connects these competing needs. Four playable expeditions focus on water recycling, shelter construction, radio delays and rover energy planning. Players walk between machines, carry materials, operate equipment and receive guidance from PIX. Each expedition combines practical action with a short explanation and knowledge check. The game supports keyboard and touch controls, English and Russian, and offline play. It aims to help school students understand scientific reasoning and engineering trade-offs through decisions they can see and test.
 
-PROJECT DEMONSTRATION URL
-[PASTE YOUR PUBLIC DEMO LINK HERE]
-Use an English slide deck of no more than 7 slides including the cover, or a video of no more than 30 seconds. The link must open without login or permission.
+LIVE GAME / WEBSITE
+https://parsec.kz/lunaris/
 
-FINAL PROJECT URL
+PROJECT DEMONSTRATION / PDF
+https://github.com/isazhannnn/LUNARIS/blob/main/demo/LUNARIS-Demo.pdf
+
+SOURCE CODE
 https://github.com/isazhannnn/LUNARIS
 
 DETAILED PROJECT DESCRIPTION
@@ -29,11 +35,8 @@ The project uses HTML, CSS, JavaScript, Canvas 2D, Web Audio and browser local s
 
 The intended benefit is a more approachable way for school students to practise scientific reasoning, compare constraints and plan a complete mission. Classroom evaluation is a future step; improved learning outcomes have not yet been formally measured. The public repository contains source code, an offline HTML build, artwork provenance and reproducible checks.
 
-USE OF SUPER INTELLIGENCE (SI)
+TEAM AND TOOL ASSISTANCE
 LUNARIS was created and directed by Parsec Studio (Meiirzhan Issa and Zhasulan Zholdas). The team defined the concept, educational focus, story requirements and final creative decisions. ChatGPT was used as a development assistant for parts of the code, explanatory writing, tests and debugging. Image-generation tools produced fictional lunar backgrounds and cover artwork. This submission edition includes visible generation marks on those visuals, with code and asset acknowledgements in the README, HTML metadata and PROJECT_METADATA.json. PIX and gameplay run locally; no external AI model is called during play. Sound effects are procedural Web Audio tones, not model-generated speech or music.
-
-SI OPTIONS TO SELECT
-Select the actual options corresponding to image generation, code/development assistance and writing assistance. Do not choose "I did not use SI". Exact checkbox labels depend on the form.
 
 NASA DATA / RESOURCES
 
@@ -114,13 +117,3 @@ Use: Repository publication tooling.
 Link text: Parsec Studio - LUNARIS source code
 URL: https://github.com/isazhannnn/LUNARIS
 Use: The complete submitted browser game and documentation.
-
-TEAM CREDIT
-Created by Parsec Studio. Project team: Meiirzhan Issa and Zhasulan Zholdas.
-
-RELEASE NOTE
-Release date: 14 November 2026. This identifies the submitted release; the archive does not invent or backdate a development start.
-
-SUBMITTING
-Complete the required fields, add your public demo URL, review the Terms and Conditions and originality declaration truthfully, then click Submit for Judging. Save Progress alone does not submit the project.
-Official guide: https://www.spaceappschallenge.org/resources/project-submission-guide/

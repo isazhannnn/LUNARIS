@@ -15,5 +15,8 @@
     "data": "No SI-generated scientific dataset is presented as NASA data. Game scores and scenarios are fictional teaching models."
   },
   "runtime_external_ai": false,
-  "nasa_resource_use": "Educational references; historical DONKI example, no live API."
+  "nasa_resource_use": "Educational references; historical DONKI example, no live API.",
+  "website": "https://parsec.kz/lunaris/",
+  "presentation": "https://github.com/isazhannnn/LUNARIS/blob/main/demo/LUNARIS-Demo.pdf",
+  "source_code": "https://github.com/isazhannnn/LUNARIS"
 }
