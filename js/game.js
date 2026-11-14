@@ -2064,7 +2064,7 @@
   // Read-only diagnostics let the included tests inspect progress without adding a cheat mode.
   window.Lunaris = Object.freeze({
     version: '6.1',
-    build: '6.1-studio-cleanup',
+    build: '6.1-main-menu',
     openAcademy: () => showScreen('academy'),
     goHome: () => showScreen('home'),
     requestGameDisplay: prepareDisplay,

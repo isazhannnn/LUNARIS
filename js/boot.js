@@ -22,9 +22,10 @@
     warning.hidden = false;
   }
 
-  function openRoute(initial = false) {
+  function openRoute() {
     const route = location.hash.slice(1);
-    if (route === 'story') {
+    const expeditionPage = /\/expeditions(?:-v6-1)?\.html$/.test(location.pathname);
+    if (route === 'story' || (!route && !expeditionPage)) {
       window.Lunaris.goHome();
       return;
     }
@@ -32,10 +33,7 @@
       window.LunarAcademy.openMission(route);
       return;
     }
-    const pathname = location.pathname;
-    const indexPage = pathname.endsWith('/') || pathname.endsWith('/index.html');
-    const expeditionPage = /\/expeditions(?:-v6-1)?\.html$/.test(pathname);
-    if ((initial && !route && indexPage) || route === 'academy' || expeditionPage) {
+    if (route === 'academy' || expeditionPage) {
       window.Lunaris.openAcademy();
       window.LunarAcademy.startSelection();
     }
@@ -76,7 +74,7 @@
       );
       return;
     }
-    openRoute(true);
+    openRoute();
     window.addEventListener('hashchange', () => openRoute());
     if (!(await loadArtwork())) {
       showLoadWarning(

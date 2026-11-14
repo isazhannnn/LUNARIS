@@ -69,7 +69,7 @@ async function boot(pathname, hash = '', options = {}) {
     '/school/games/lunaris/',
   ]) {
     const result = await boot(pathname);
-    assert.deepEqual(result.calls, ['hub'], pathname);
+    assert.deepEqual(result.calls, ['story'], pathname);
     assert.equal(result.warning.hidden, true);
     passed++;
   }
@@ -78,10 +78,12 @@ async function boot(pathname, hash = '', options = {}) {
     passed++;
   }
   assert.deepEqual((await boot('/lunaris/', '#story')).calls, ['story']);
+  assert.deepEqual((await boot('/lunaris/', '#academy')).calls, ['hub']);
+  assert.deepEqual((await boot('/expeditions-v6-1.html')).calls, ['hub']);
   assert.equal((await boot('/lunaris/', '', { missingModule: true })).warning.hidden, false);
   assert.equal((await boot('/lunaris/', '', { missingArtwork: true })).warning.hidden, false);
   assert.equal((await boot('/lunaris/', '', { rejectArtwork: true })).warning.hidden, false);
-  passed += 4;
+  passed += 6;
   console.log(`PASS ${passed} startup routes and module/artwork failure checks`);
 })().catch((error) => {
   console.error(error);

@@ -14,7 +14,7 @@ Built for [Build a Junior Astronaut Mission Trainer](https://www.spaceappschalle
 
 1. Download this repository with **Code > Download ZIP** and extract it.
 2. Open **LUNARIS-Play.html** in a desktop browser. Its code, styles and marked artwork are embedded, so it also works offline.
-3. Choose a mission. The story campaign is available from the menu or `#story`.
+3. The game opens at the main menu. Choose the story or press **Play expeditions** to select a science mission. Direct mission links remain available.
 
 To run the source edition, start `python -m http.server 8000` in the repository and open `http://localhost:8000/`. A hosted copy works on phones. No account, API key, database or dependency installation is needed to play.
 

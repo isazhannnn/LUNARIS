@@ -4,11 +4,12 @@ const fs=require('node:fs'),path=require('node:path');
 (async()=>{const b=await launch(),checks=[];function check(name,ok){if(!ok)throw Error(name);checks.push(name);console.log('PASS '+name);}
  try{
   await b.viewport(1440,1000);await b.navigate('');await b.evaluate('LunarAcademyRender.preload()');
-  check('root URL immediately opens playable expedition hub',await b.evaluate("location.pathname==='/'&&Lunaris.getScreen()==='academy'&&LunarAcademy.getState().scene.id==='hub'"));
+  check('root URL opens main menu',await b.evaluate("location.pathname==='/'&&Lunaris.getScreen()==='home'&&!document.querySelector('#home').hidden&&document.querySelector('#academy').hidden"));
   check('all four illustrated locations are loaded',await b.evaluate("['water','shield','comms','rover'].every(id=>LunarAcademyRender.assetStatus()[id]==='ready')&&document.querySelector('#boot-warning').hidden"));
+  await b.click('#academy-open');check('menu action opens playable expedition hub',await b.evaluate("Lunaris.getScreen()==='academy'&&LunarAcademy.getState().scene.id==='hub'"));
   check('all four missions are offered',await b.evaluate("document.querySelectorAll('.academy-launch').length===4"));
   await b.evaluate("document.querySelector('#academy-back').click()");await delay(150);check('return to story menu is usable',await b.evaluate("Lunaris.getScreen()==='home'"));
-  await b.navigate('index.html');check('index URL also opens expedition hub',await b.evaluate("Lunaris.getScreen()==='academy'&&LunarAcademy.getState().scene.id==='hub'"));
+  await b.navigate('index.html');check('index URL also opens main menu',await b.evaluate("Lunaris.getScreen()==='home'&&!document.querySelector('#home').hidden"));await b.click('#academy-open');
   for(const [i,id]of ['water','shield','comms','rover'].entries()){
    await b.viewport(1440,1000);if(i>0)await b.evaluate('LunarAcademy.startSelection()');
    await b.click(`.academy-card[data-mission=${id}] .academy-launch`);await b.wait(`LunarAcademy.getState().active==='${id}'`);await b.evaluate("document.querySelector('#pix-dialogue-close').click();document.querySelector('#academy-play-canvas').scrollIntoView({block:'center'})");await delay(160);

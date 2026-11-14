@@ -23,7 +23,7 @@
       content="Procedural Web Audio effects, no generated speech or AI audio-model service; audio code received ChatGPT assistance."
     />
     <meta name="release-date" content="2026-11-14" />
-    <meta name="lunaris-build" content="6.1-studio-cleanup" />
+    <meta name="lunaris-build" content="6.1-main-menu" />
     <title>LUNARIS · The Last Signal | Parsec Studio</title>
     <link
       rel="icon"
@@ -12838,7 +12838,7 @@ window.LunarSources = [
   // Read-only diagnostics let the included tests inspect progress without adding a cheat mode.
   window.Lunaris = Object.freeze({
     version: '6.1',
-    build: '6.1-studio-cleanup',
+    build: '6.1-main-menu',
     openAcademy: () => showScreen('academy'),
     goHome: () => showScreen('home'),
     requestGameDisplay: prepareDisplay,
@@ -18237,9 +18237,10 @@ window.LunarAcademyAssets = Object.freeze({
     warning.hidden = false;
   }
 
-  function openRoute(initial = false) {
+  function openRoute() {
     const route = location.hash.slice(1);
-    if (route === 'story') {
+    const expeditionPage = /\/expeditions(?:-v6-1)?\.html$/.test(location.pathname);
+    if (route === 'story' || (!route && !expeditionPage)) {
       window.Lunaris.goHome();
       return;
     }
@@ -18247,10 +18248,7 @@ window.LunarAcademyAssets = Object.freeze({
       window.LunarAcademy.openMission(route);
       return;
     }
-    const pathname = location.pathname;
-    const indexPage = pathname.endsWith('/') || pathname.endsWith('/index.html');
-    const expeditionPage = /\/expeditions(?:-v6-1)?\.html$/.test(pathname);
-    if ((initial && !route && indexPage) || route === 'academy' || expeditionPage) {
+    if (route === 'academy' || expeditionPage) {
       window.Lunaris.openAcademy();
       window.LunarAcademy.startSelection();
     }
@@ -18291,7 +18289,7 @@ window.LunarAcademyAssets = Object.freeze({
       );
       return;
     }
-    openRoute(true);
+    openRoute();
     window.addEventListener('hashchange', () => openRoute());
     if (!(await loadArtwork())) {
       showLoadWarning(
